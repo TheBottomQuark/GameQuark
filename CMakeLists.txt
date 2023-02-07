@@ -43,7 +43,7 @@ enable_testing()
 include_directories(test1 ${CMAKE_CURRENT_SOURCE_DIR}/tests ${GameQuark_INCLUDE_DIRS})
 add_executable(test1 ${TEST1_SOURCES})
 link_directories(test1 .)
-target_link_libraries(test1 ${GameQuark_LIBRARIES})
+target_link_libraries(test1 ${GameQuark_LIBRARIES} ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES} ${GLFW_LIBRARIES} ${GLM_LIBRARIES})
 add_test(NAME test1 COMMAND ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/test1)
 set_tests_properties(test1 PROPERTIES PASS_REGULAR_EXPRESSION "Passed")
 

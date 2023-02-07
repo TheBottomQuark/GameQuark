@@ -40,4 +40,3 @@ class Window
         void getMousePosition(double &x, double &y) const;
 };
 
-void librarytest();
